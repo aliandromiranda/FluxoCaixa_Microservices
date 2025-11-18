@@ -1,0 +1,9 @@
+namespace FluxoCaixa.Consolidated.Services
+{
+    public interface IRedisCache
+    {
+        Task<string?> GetAsync(string key);
+        Task SetAsync(string key, string value, TimeSpan ttl);
+        Task RemoveAsync(string key);
+    }
+}
